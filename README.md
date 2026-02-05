@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# Navigation App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a React Native application built with [Expo](https://expo.dev) and [Expo Router](https://docs.expo.dev/router/introduction).
 
-## Get started
+## Project Overview
 
-1. Install dependencies
+This project serves as a navigation application, leveraging various Expo modules and libraries for enhanced functionality, including:
 
-   ```bash
-   npm install
-   ```
+- **Expo Router**: For file-based routing and navigation.
+- **Expo Camera & AV**: For media handling capabilities.
+- **Speech Recognition**: Integegrating speech services (via `expo-speech` and `microsoft-cognitiveservices-speech-sdk`).
+- **Zustand**: For state management.
+- **Expo Location/Sensors**: (Implied by the nature of a navigation app and installed dependencies like `@react-native-community/geolocation`).
 
-2. Start the app
+## Prerequisites
 
-   ```bash
-   npx expo start
-   ```
+Before you begin, ensure you have the following installed:
 
-In the output, you'll find options to open the app in a
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) (usually comes with Node.js)
+- [Expo Go](https://expo.dev/go) app on your mobile device (iOS/Android) for testing, or an Android Emulator/iOS Simulator setup.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Installation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+1.  **Clone the repository** (if you haven't already):
 
-## Get a fresh project
+    ```bash
+    git clone <repository-url>
+    cd Navigation
+    ```
 
-When you're ready, run:
+2.  **Install dependencies**:
+
+    ```bash
+    npm install
+    ```
+
+## Running the Project
+
+To start the development server, run:
 
 ```bash
-npm run reset-project
+npm start
+```
+or
+```bash
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Running on Device/Emulator
 
-## Learn more
+-   **Android**:
+    ```bash
+    npm run android
+    ```
+    Or press `a` in the terminal after starting the server.
 
-To learn more about developing your project with Expo, look at the following resources:
+-   **iOS**:
+    ```bash
+    npm run ios
+    ```
+    Or press `i` in the terminal after starting the server. (Requires macOS and Xcode).
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+-   **Web**:
+    ```bash
+    npm run web
+    ```
+    Or press `w` in the terminal after starting the server.
 
-## Join the community
+-   **Physical Device**:
+    Scan the QR code displayed in the terminal with the **Expo Go** app (Android) or the Camera app (iOS).
 
-Join our community of developers creating universal apps.
+## Project Structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+-   **`app/`**: Contains the routes and screens for the application (file-based routing).
+-   **`assets/`**: Images, fonts, and other static assets.
+-   **`components/`**: Reusable React components.
+-   **`constants/`**: application configuration and constants.
+-   **`hooks/`**: Custom React hooks.
+-   **`scripts/`**: Helper scripts for the project.
+
+## Scripts
+
+-   `npm start`: Starts the Expo development server.
+-   `npm run android`: Builds and runs the app on an Android emulator or device.
+-   `npm run ios`: Builds and runs the app on an iOS simulator or device.
+-   `npm run web`: Runs the app in the browser.
+-   `npm run lint`: Runs ESLint to check for code quality issues.
+-   `npm run reset-project`: Resets the project to a clean state (use with caution).
